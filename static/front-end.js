@@ -3,7 +3,7 @@
 {
     function printOutSomething(x)
     {
-        someStr.replace(/['"]+/g, '')
+        x = x.replace(/['"]+/g, "")
         document.getElementById("h1").innerHTML = x;
     }
 
