@@ -21,8 +21,8 @@
     document.getElementById("submit").onclick = function()
     {
         document.getElementById("h2").innerHTML = "Clicked";
-        document.getElementById("h3").innerHTML = document.getElementById("src");
-        document.getElementById("h4").innerHTML = document.getElementById("dest");
+        document.getElementById("h3").innerHTML = document.getElementById("src").value;
+        document.getElementById("h4").innerHTML = document.getElementById("dest").value;
 
         let url = "/api/v1/?source=" + document.getElementById("src") + "&destination=" + document.getElementById("dest")
         getRequest(url);
