@@ -3,7 +3,8 @@
 {
     function printOutSomething(x)
     {
-        document.write(x)
+        x = x.replace(/['"]+/g, "")
+        document.getElementById("h1").innerHTML = x;
     }
 
     function getRequest(url)
@@ -12,15 +13,16 @@
         request.open('GET', url, true);
         request.send()
         request.onload = function() {
-          if (this.status >= 200 && this.status < 400) {
-            printOutSomething(JSON.parse(this.response['Yay']))
+          if (this.status >= 200 && this.status < 400)
+          {
+            printOutSomething(this.response)
           }
         }
     }
 
-    document.addEventListener('dblclick', function()
+    document.getElementById("submit").addEventListener('click', function()
     {
-        let url = "/api/v1/"
+        let url = "/api/v1/?source=" + document.getElementById("src").value + "&destination=" + document.getElementById("dest").value
         getRequest(url);
     });
 }())
