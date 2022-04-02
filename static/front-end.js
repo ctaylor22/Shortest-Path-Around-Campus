@@ -1,9 +1,9 @@
 'use strict';
 (function()
 {
-    function printOutSomething()
+    function printOutSomething(x)
     {
-        document.write(5 + 11)
+        document.write(x)
     }
 
     function getRequest(url)
@@ -13,7 +13,7 @@
         request.send()
         request.onload = function() {
           if (this.status >= 200 && this.status < 400) {
-            printOutSomething()
+            printOutSomething(JSON.parse(this.response['Yay']))
           }
         }
     }
