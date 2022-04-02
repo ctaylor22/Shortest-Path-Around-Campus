@@ -22,6 +22,16 @@
         }
     }
 
+    let stations = [];
+    let links = document.getElementById("stns_icons");
+    links.addEventListener('click', function(event)
+    {
+        if (stations.length == 0)
+        {
+            event.target.setAttribute('fill', "#FF0000");
+            stations.push(event.target.id);
+        }
+    });
     document.getElementById("submit").addEventListener('click', function()
     {
         let url = "/api/v1/?source=" + document.getElementById("src").value + "&destination=" + document.getElementById("dest").value
