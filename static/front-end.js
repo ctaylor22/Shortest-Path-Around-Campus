@@ -14,8 +14,7 @@
         request.onload = function() {
           if (this.status >= 200 && this.status < 400)
           {
-            route = this.response
-            printOutSomething(route)
+            printOutSomething(this.response)
           }
         }
     }
