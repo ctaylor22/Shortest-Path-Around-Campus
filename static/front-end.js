@@ -1,6 +1,21 @@
 'use strict';
 (function()
 {
+    function markPath(path)
+    {
+        path = path.replace("[", "");
+        path = path.replace("]", "");
+        path = path.replace(/['"]+/g, "");
+        shortestPath = path.split(",");
+        for (let i = 0; i < path.length; i++)
+        {
+            let station = document.getElementById(path[i]);
+            let radius = parseFloat(station.getAttribute('r')) + 2;
+            station.setAttribute('r', radius);
+            station.setAttribute('fill', "#00FFFF");
+        }
+    }
+
     function printOutSomething(x)
     {
         x = x.replace("[", "");
@@ -23,6 +38,7 @@
     }
 
     let stations = [];
+    let shortestPath = [];
     let links = document.getElementById("stns_icons");
     links.addEventListener('click', function(event)
     {
@@ -31,7 +47,18 @@
             event.target.setAttribute('fill', "#FF0000");
             stations.push(event.target.id);
         }
+        else if (stations.length == 1)
+        {
+            event.target.setAttribute('fill', "#00FF00");
+            stations.push(event.target.id);
+      
+            let url = "/api/v1/?start=" + stations[0] + "&end=" + stations[1];
+            getRequest(url);
+      
+        }
+        event.preventDefault();
     });
+
     document.getElementById("submit").addEventListener('click', function()
     {
         let url = "/api/v1/?source=" + document.getElementById("src").value + "&destination=" + document.getElementById("dest").value
