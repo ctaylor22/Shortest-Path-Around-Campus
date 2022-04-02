@@ -18,9 +18,9 @@
         }
     }
 
-    document.addEventListener('dblclick', function()
+    document.getElementById("submit").onclick("click", function()
     {
-        let url = "/api/v1/?source=" + "A" + "&destination=" + "F"
+        let url = "/api/v1/?source=" + document.getElementById("src") + "&destination=" + document.getElementById("dest")
         getRequest(url);
     });
 }())
