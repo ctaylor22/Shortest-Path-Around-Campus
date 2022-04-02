@@ -15,7 +15,7 @@
           if (this.status >= 200 && this.status < 400)
           {
             route = JSON.parse(this.response)['route']
-            printOutSomething(route)
+            printOutSomething(JSON.stringify(route))
           }
         }
     }
