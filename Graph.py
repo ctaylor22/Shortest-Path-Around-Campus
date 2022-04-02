@@ -1,3 +1,5 @@
+import numpy as np
+
 class Graph:
 
     # Member Variables
@@ -17,9 +19,12 @@ class Graph:
     def add_vertex(self, vertex):
         # if vertex doesn't already exist add it to the dictionary
         if vertex not in self.gdict:
-            self.gdict[vertex] = []
+            self.gdict[vertex] = {}
         else:
             raise Exception("Vertex already exists")
+
+    def adjacent(self, vertex):
+        return list(self.gdict[vertex].keys())
 
     def remove_vertex(self, vertex):
 
@@ -39,8 +44,8 @@ class Graph:
             raise Exception("Invalid Vertices")
 
         if destination not in self.gdict[source] or source not in self.gdict[destination]:
-            self.gdict[source].append({destination : weight})
-            self.gdict[destination].append({source : weight})
+            self.gdict[source][destination] = weight
+            self.gdict[destination][source] = weight
         else:
             raise Exception("Duplicate Edge")
     
@@ -69,8 +74,56 @@ class Graph:
         return result
 
     def shortest_path_between(self, source, destination):
-        pass
+        dist = dict()
+        parent = dict()
+        visited = set()
+
+        dist[source] = 0
+        parent[source] = source
+
+        while len(visited) < len(self.get_vertices()):
+            current = None
+            min_value = np.Infinity
+
+            # Finds closest non visited vertex
+            for vertex in dist:
+                if vertex not in visited:
+                    if dist[vertex] < min_value:
+                        current = vertex
+                        min_value = dist[vertex]
+            
+            visited.add(current)
+
+            for other in self.adjacent(current):
+                if other not in visited:
+                    new_dist = self.get_edge_weight(current, other) + dist[current]
+
+                    if other not in dist or new_dist < dist[other]:
+                        dist[other] = new_dist
+                        parent[other] = current
+
+        shortest_path = list()
+
+        new_vertex = destination
+        while new_vertex != source:
+            shortest_path.append(new_vertex)
+            new_vertex = parent[new_vertex]
+
+        shortest_path.append(source)
+
+        shortest_path.reverse()
+
+        return shortest_path
+
+    def path_length(self, vertices: list):
+        total = 0
+
+        i = 0
+        while i < len(vertices) - 1:
+            total += self.get_edge_weight(vertices[i], vertices[i + 1])
+            i += 1
+            
+        return total    
 
     def __str__(self):
         return self.gdict.__str__()
-
