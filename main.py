@@ -1,10 +1,15 @@
 from Graph import Graph
 
+def test(x: str):
+    result = "NO"
+    if x.__eq__("1"):
+        result = "Yes"
+
+    return result
+
 def main():
 
-
-    g = Graph.load_from_json("GeorgeFoxCampus.json")
-    print(g)
+    test("1")
     # print(g.path_length(g.shortest_path_between("a", "d")))
 
 
