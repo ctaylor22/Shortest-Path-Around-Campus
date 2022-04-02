@@ -4,7 +4,7 @@
     function printOutSomething(x)
     {
         const element = document.getElementById("div1");
-        document.write(x[0])
+        document.write(5)
     }
 
     function getRequest(url)
