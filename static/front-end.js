@@ -18,10 +18,10 @@
         }
     }
 
-    document.getElementById("submit").onclick("click", function()
+    document.getElementById("submit").onclick = function()
     {
         document.getElementById("h2").innerHTML = "Clicked";
         let url = "/api/v1/?source=" + document.getElementById("src") + "&destination=" + document.getElementById("dest")
         getRequest(url);
-    });
+    };
 }())
