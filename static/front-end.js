@@ -4,13 +4,6 @@
     function printOutSomething(x)
     {
         const element = document.getElementById("div1");
-        for (var key in x.jsonData)
-        {
-            const para = document.createElement("p");
-            const node = document.createTextNode(key);
-            para.appendChild(node);
-            element.appendChild(para);
-        }
         document.getElementById("h1").innerHTML = x;
     }
 
