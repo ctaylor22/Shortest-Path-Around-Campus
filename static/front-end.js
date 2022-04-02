@@ -20,11 +20,7 @@
 
     document.getElementById("submit").addEventListener('click', function()
     {
-        document.getElementById("h1").innerHTML = "Clicked";
+        let url = "/api/v1/?source=" + document.getElementById("src").value + "&destination=" + document.getElementById("dest").value
+        getRequest(url);
     });
-        // document.getElementById("h3").innerHTML = document.getElementById("src").value;
-        // document.getElementById("h4").innerHTML = document.getElementById("dest").value;
-
-        // let url = "/api/v1/?source=" + document.getElementById("src").value + "&destination=" + document.getElementById("dest").value
-        // getRequest(url);
 }())
