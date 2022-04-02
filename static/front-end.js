@@ -3,6 +3,14 @@
 {
     function printOutSomething(x)
     {
+        const element = document.getElementById("div1");
+        for (var key in x.jsonData)
+        {
+            const para = document.createElement("p");
+            const node = document.createTextNode(key);
+            para.appendChild(node);
+            element.appendChild(para);
+        }
         document.getElementById("h1").innerHTML = x;
     }
 
@@ -13,17 +21,14 @@
         request.send()
         request.onload = function() {
           if (this.status >= 200 && this.status < 400) {
-            printOutSomething(this.response)
+            route = JSON.parse(this.response)['route']
+            printOutSomething(route)
           }
         }
     }
 
     document.getElementById("submit").onclick = function()
     {
-        document.getElementById("h2").innerHTML = "Clicked";
-        document.getElementById("h3").innerHTML = document.getElementById("src").value;
-        document.getElementById("h4").innerHTML = document.getElementById("dest").value;
-
         let url = "/api/v1/?source=" + document.getElementById("src").value + "&destination=" + document.getElementById("dest").value
         getRequest(url);
     };
