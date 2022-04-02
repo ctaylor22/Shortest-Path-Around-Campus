@@ -18,7 +18,7 @@
         }
     }
 
-    document.addEventListener('dblclick', function(event)
+    document.addEventListener('dblclick', function()
     {
         let url = "/api/v1/"
         getRequest(url);

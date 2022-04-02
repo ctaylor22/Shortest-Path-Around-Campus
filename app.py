@@ -9,4 +9,4 @@ def index():
 
 @app.route('/api/v1/')
 def api():
-    return jsonify({"Yay" : "YAY"})
+    return jsonify({"Yay" : "YAY"}), 200
