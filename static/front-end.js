@@ -3,8 +3,7 @@
 {
     function printOutSomething(x)
     {
-        const element = document.getElementById("div1");
-        document.write(5)
+        document.getElementById("h1").innerHTML = x;
     }
 
     function getRequest(url)
@@ -14,7 +13,7 @@
         request.send()
         request.onload = function() {
           if (this.status >= 200 && this.status < 400) {
-            route = JSON.parse(this.response)['route']
+            route = this.response
             printOutSomething(route)
           }
         }
