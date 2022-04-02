@@ -39,7 +39,7 @@
 
     let stations = [];
     let shortestPath = [];
-    let links = document.getElementById("stns_icons");
+    let links = document.getElementById("waypoint_icons");
     links.addEventListener('click', function(event)
     {
         if (stations.length == 0)
@@ -52,7 +52,7 @@
             event.target.setAttribute('fill', "#00FF00");
             stations.push(event.target.id);
       
-            let url = "/api/v1/?start=" + stations[0] + "&end=" + stations[1];
+            let url = "/api/v1/?source=" + stations[0] + "&destination=" + stations[1];
             getRequest(url);
       
         }
