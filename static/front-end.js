@@ -1,7 +1,7 @@
 'use strict';
 (function()
 {
-    function printOutSomething(x)
+    function printOutSomething()
     {
         document.getElementById("h1").innerHTML = "Yay"
     }
@@ -13,7 +13,7 @@
         request.send()
         request.onload = function() {
           if (this.status >= 200 && this.status < 400) {
-            printOutSomething(JSON.parse(this.response['Yay']))
+            printOutSomething()
           }
         }
     }
