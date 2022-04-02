@@ -12,8 +12,10 @@
         request.open('GET', url, true);
         request.send()
         request.onload = function() {
-          if (this.status >= 200 && this.status < 400) {
-            printOutSomething(this.response)
+          if (this.status >= 200 && this.status < 400)
+          {
+            route = JSON.parse(this.response)['route']
+            printOutSomething(route)
           }
         }
     }
