@@ -1,5 +1,5 @@
 # app.py
-from flask import Flask, render_template
+from flask import Flask, jsonify, render_template
 from Graph import Graph
 app = Flask(__name__)
 
@@ -9,4 +9,4 @@ def index():
 
 @app.route('/api/v1/')
 def api():
-    return "YAY"
+    return jsonify({"Yay" : "YAY"})
