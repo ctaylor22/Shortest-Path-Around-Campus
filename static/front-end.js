@@ -13,15 +13,19 @@
         request.send()
         request.onload = function() {
           if (this.status >= 200 && this.status < 400) {
-            route = this.response
-            printOutSomething(route)
+            printOutSomething(this.response)
           }
         }
     }
 
     document.getElementById("submit").onclick = function()
     {
+        document.getElementById("h2").innerHTML = "Clicked";
+        document.getElementById("h3").innerHTML = document.getElementById("src").value;
+        document.getElementById("h4").innerHTML = document.getElementById("dest").value;
+
         let url = "/api/v1/?source=" + document.getElementById("src").value + "&destination=" + document.getElementById("dest").value
         getRequest(url);
+
     };
 }())
