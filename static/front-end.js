@@ -20,7 +20,7 @@
 
     document.addEventListener('dblclick', function()
     {
-        let url = "/api/v1/"
+        let url = "/api/v1/?source=" + "A" + "&destination=" + "F"
         getRequest(url);
     });
 }())
