@@ -3,7 +3,7 @@
 {
     function printOutSomething()
     {
-        document.write(5 + 1)
+        document.getElementById("h1").innerHTML = "Yay";
     }
 
     function getRequest(url)
