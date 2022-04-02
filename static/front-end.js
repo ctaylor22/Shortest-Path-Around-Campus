@@ -3,7 +3,7 @@
 {
     function printOutSomething()
     {
-
+        document.write(5 + 6)
     }
 
     function getRequest(url)
@@ -17,4 +17,6 @@
           }
         }
     }
+
+    document.addEventListener('dblclick', printOutSomething);
 }())
