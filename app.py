@@ -10,5 +10,3 @@ def index():
 @app.route('/api/v1/')
 def api():
     return "YAY"
-
-app.run(debug=True)
