@@ -1,4 +1,5 @@
 import numpy as np
+import json
 
 class Graph:
 
@@ -127,3 +128,16 @@ class Graph:
 
     def __str__(self):
         return self.gdict.__str__()
+
+    def load_from_json(filename):
+        result = None
+        with open(filename, "r") as file:
+            json_data = json.load(file)
+            
+            for source in json_data:
+                for destination in json_data[source]:
+                    json_data[destination][source] = json_data[source][destination]
+
+            result = Graph(json_data)
+        
+        return result
