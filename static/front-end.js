@@ -4,6 +4,13 @@
     function printOutSomething(x)
     {
         const element = document.getElementById("div1");
+        for (let i = 0; i < x.length; i++)
+        {
+            const para = document.createElement("p" + i.toString());
+            const node = document.createTextNode(x[i]);
+            para.appendChild(node);
+            element.appendChild(para);
+        }
         document.getElementById("h1").innerHTML = x;
     }
 
