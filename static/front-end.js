@@ -124,7 +124,8 @@ var unacceptable_vertices = [
         {
             for (i = 0; i < unacceptable_vertices.length; i++)
             {
-                document.getElementById(shortestPath[i]).setAttribute('r', 0);
+                let waypoint = document.getElementById(unacceptable_vertices[i]);
+                waypoint.setAttribute('r', 0);
             }
         }
     });
