@@ -24,7 +24,7 @@ class Graph:
         else:
             raise Exception("Vertex already exists")
 
-    def adjacent(self, vertex, handicap = False):
+    def adjacent(self, vertex, handicap=False):
         result = list()
         for key in self.gdict[vertex].keys():
             if handicap:
@@ -82,7 +82,7 @@ class Graph:
         
         return result
 
-    def shortest_path_between(self, source, destination, handicap:bool):
+    def shortest_path_between(self, source, destination, handicap:bool=False):
         dist = dict()
         parent = dict()
         visited = set()
