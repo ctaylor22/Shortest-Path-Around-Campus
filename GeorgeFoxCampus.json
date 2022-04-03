@@ -70,7 +70,7 @@
   "Track west": {},
   "Track east": {"Track west": [187], "Carlton way intersection": [292]},
   "Wheeler stairs": {"Track east": [193]},
-  "Gravel intersection": {"Wheeler Bridge west": [134], "Wheeler stairs": [114],"Amphitheater intersection": [108]},
+  "Gravel intersection": {"Wheeler Bridge west": [134, false], "Wheeler stairs": [114, false],"Amphitheater intersection": [108, false]},
   "Amphitheater intersection": {"Wheeler stairs": [122, false], "Canyon west entrance": [235, false]},
   "Edwards AC parking": {"Edwards main entrance": [140], "Klages east entrance": [50], "Klages library intersection": [182]},
   "Carlton way intersection": {"Crisman intersection": [140], "Edwards AC parking": [95], "Minthorn-Murdock intersection": [173]},
