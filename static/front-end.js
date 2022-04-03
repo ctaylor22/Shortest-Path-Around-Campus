@@ -11,8 +11,8 @@
         for (let i = 0; i < shortestPath.length; i++)
         {
             let station = document.getElementById(shortestPath[i]);
-            // let radius = parseFloat(station.getAttribute('r')) + 2;
-            // station.setAttribute('r', radius);
+            let radius = parseFloat(station.getAttribute('r')) + 2;
+            station.setAttribute('r', radius);
             station.setAttribute('fill', "#FAED27");
         }
     }
