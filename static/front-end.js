@@ -122,11 +122,8 @@ var unacceptable_vertices = [
         handicap = document.getElementById("Handicap").checked
         if (handicap)
         {
-            for (i = 0; i < unacceptable_vertices.length; i++)
-            {
-                let waypoint = document.getElementById(unacceptable_vertices[i]);
-                waypoint.setAttribute('r', 0);
-            }
+            let waypoint = document.getElementById("Amphitheater intersection");
+            waypoint.setAttribute('r', 0);
         }
     });
 }())
