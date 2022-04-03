@@ -2,7 +2,7 @@
 from flask import Flask, jsonify, render_template, request
 from Graph import Graph
 
-graph = Graph.load_from_json("test.json")
+graph = Graph.load_from_json("GeorgeFoxCampus.json")
 app = Flask(__name__)
 
 @app.route('/')
