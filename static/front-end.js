@@ -13,7 +13,7 @@
             let station = document.getElementById(shortestPath[i]);
             // let radius = parseFloat(station.getAttribute('r')) + 2;
             // station.setAttribute('r', radius);
-            station.setAttribute('fill', "#FAED27");
+            station.setAttribute('fill', "#00FFFF");
         }
     }
 
