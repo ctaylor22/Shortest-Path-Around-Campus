@@ -136,7 +136,7 @@ class Graph:
             
             for source in json_data:
                 for destination in json_data[source]:
-                    json_data[destination][source][0] = json_data[source][destination][0]
+                    json_data[destination][source] = [json_data[source][destination][0]]
 
             result = Graph(json_data)
         
