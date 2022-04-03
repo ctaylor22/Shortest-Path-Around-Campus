@@ -1,7 +1,15 @@
 'use strict';
 (function()
 {
-    function reset(e) {
+    var handicap = false;
+    function handicapBox()
+    {
+        var checkBox = document.getElementById("myCheck");
+        handicap = checkBox.checked
+    }
+
+    function reset(e)
+    {
         for (let i = 0; i < stations.length; i++)
         {
             document.getElementById(stations[i]).setAttribute('fill', "#FFFFFF");
@@ -77,7 +85,7 @@
             event.target.setAttribute('fill', "#00FF00");
             stations.push(event.target.id);
             
-            let url = "/api/v1/?source=" + stations[0] + "&destination=" + stations[1];
+            let url = "/api/v1/?source=" + stations[0] + "&destination=" + stations[1] + "&handicap=" + handicap;
             console.log(url);
             getRequest(url);
         }
