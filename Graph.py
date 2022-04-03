@@ -18,7 +18,10 @@ class Graph:
     def get_vertices(self, handicap=False):
         result = list()
         for key in self.gdict.keys():
-            if key not in handicap_vert:
+            if handicap:
+                if key not in handicap_vert:
+                    result.append(key)
+            else:
                 result.append(key)
 
         return result
