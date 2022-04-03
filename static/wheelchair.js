@@ -3,7 +3,7 @@ var warning_entrances = [
     "EHS east entrance",
     "Brougher Hall entrance",
     "Minthorn entrance",
-    "Klages east entrance"]
+    "Klages east entrance"];
 
 var unacceptable_vertices = [
     "Amphitheater intersection",
@@ -14,4 +14,6 @@ var unacceptable_vertices = [
     "Pavilion",
     "Suites lot",
     "Canyon north path",
-    "Canyon south path"]
+    "Canyon south path"];
+
+module.exports = {Unacceptable};

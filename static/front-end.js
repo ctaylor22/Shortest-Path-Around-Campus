@@ -1,5 +1,16 @@
 'use strict';
 var handicap = false;
+var unacceptable_vertices = [
+    "Amphitheater intersection",
+    "Gravel intersection",
+    "Canyon west entrance",
+    "Canyon north entrance",
+    "Spil stairs",
+    "Pavilion",
+    "Suites lot",
+    "Canyon north path",
+    "Canyon south path"];
+
 (function()
 {
     function handicapBox()
@@ -106,8 +117,16 @@ var handicap = false;
             reset(e);
         }
     });
-    document.getElementById("Handicap").addEventListener('click', function()
+    document.getElementById("Handicap").addEventListener('click', function(e)
     {
+        reset(e);
         handicap = document.getElementById("Handicap").checked
+        if (handicap)
+        {
+            for (i = 0; i < unacceptable_vertices.length; i++)
+            {
+                document.getElementById(shortestPath[i]).setAttribute('r', 0);
+            }
+        }
     });
 }())
