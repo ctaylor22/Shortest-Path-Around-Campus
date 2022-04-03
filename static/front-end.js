@@ -119,15 +119,16 @@ var unacceptable_vertices = [
     });
     document.getElementById("Handicap").addEventListener('click', function(e)
     {
+        handicap = document.getElementById("Handicap").checked
+
         if (stations.length <= 1)
         {
             let temp = handicap;
             reset(e);
-            document.getElementById('Handicap').checked = !temp;
+            document.getElementById('Handicap').checked = temp;
             handicap = temp;
         }
 
-        handicap = document.getElementById("Handicap").checked
         if (handicap)
         {
             for (let i = 0; i < unacceptable_vertices.length; i++)
