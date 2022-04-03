@@ -15,7 +15,14 @@ h1{
 }
 
 .right-element {
-    background: red;
     display: inline-block;
     float: left;
+}
+
+.label{
+    font-size: 150%;
+}
+
+.input{
+    font-size: 150%;
 }
