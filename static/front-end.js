@@ -106,4 +106,9 @@
             reset(e);
         }
     });
+    document.getElementById("Handicap").addEventListener('click', function()
+    {
+        var checkBox = document.getElementById("Handicap");
+        handicap = checkBox.checked
+    });
 }())
