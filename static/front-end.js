@@ -11,8 +11,8 @@
         for (let i = 0; i < shortestPath.length; i++)
         {
             let station = document.getElementById(shortestPath[i]);
-            let radius = parseFloat(station.getAttribute('r')) + 2;
-            station.setAttribute('r', radius);
+            // let radius = parseFloat(station.getAttribute('r')) + 2;
+            // station.setAttribute('r', radius);
             station.setAttribute('fill', "#00FFFF");
         }
     }
@@ -54,6 +54,7 @@
             stations.push(event.target.id);
             
             let url = "/api/v1/?source=" + stations[0] + "&destination=" + stations[1];
+            console.log(url);
             getRequest(url);
         }
         event.preventDefault();
