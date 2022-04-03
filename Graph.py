@@ -122,8 +122,6 @@ class Graph:
 
         shortest_path.reverse()
         
-        if handicap:
-            shortest_path = [source]
         return shortest_path
 
     def path_length(self, vertices: list):
