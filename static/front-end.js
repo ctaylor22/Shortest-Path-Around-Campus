@@ -123,10 +123,8 @@ var unacceptable_vertices = [
 
         if (stations.length <= 1)
         {
-            let temp = handicap;
             reset(e);
-            document.getElementById('Handicap').checked = temp;
-            handicap = temp;
+            document.getElementById('Handicap').checked = true;
         }
 
         if (handicap)
