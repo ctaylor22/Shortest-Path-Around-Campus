@@ -11,13 +11,13 @@
         shortestPath.pop();
         document.getElementById("h1").innerHTML = path_len;
 
-        for (let i = 0; i < shortestPath.length; i++)
-        {
-            let station = document.getElementById(shortestPath[i]);
-            let radius = parseFloat(station.getAttribute('r')) + 2;
-            station.setAttribute('r', radius);
-            station.setAttribute('fill', "#FAED27");
-        }
+        // for (let i = 0; i < shortestPath.length; i++)
+        // {
+        //     let station = document.getElementById(shortestPath[i]);
+        //     let radius = parseFloat(station.getAttribute('r')) + 2;
+        //     station.setAttribute('r', radius);
+        //     station.setAttribute('fill', "#FAED27");
+        // }
     }
 
     function printOutSomething(x)
