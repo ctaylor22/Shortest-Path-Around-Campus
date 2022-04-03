@@ -12,7 +12,7 @@ def index():
 @app.route('/api/v1/')
 def api():
     req = request.args
-    shortest_path = graph.shortest_path_between(req['source'], req['destination'], bool(req['handicap']))
+    shortest_path = graph.shortest_path_between(req['source'], req['destination'], bool(req['handicap'].capitalize()))
     path_len = graph.path_length(shortest_path)
     shortest_path.append(path_len)
     return jsonify(shortest_path), 200
