@@ -33,7 +33,7 @@ class Graph:
             else:
                 result.append(key)
 
-        return
+        return result
 
     def remove_vertex(self, vertex):
 
