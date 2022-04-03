@@ -23,7 +23,7 @@
     }
 
     let stations = [];
-    let links = document.getElementById("stns_icons");
+    let links = document.getElementById("waypoint_icons");
     links.addEventListener('click', function(event)
     {
         if (stations.length == 0)
