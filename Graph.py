@@ -1,5 +1,6 @@
 import numpy as np
 import json
+handicap_vert = ["Amphitheater intersection", "Gravel intersection", "Canyon west entrance", "Canyon north entrance","Spil stairs", "Pavilion", "Suites lot", "Canyon north path", "Canyon south path"]
 
 class Graph:
 
@@ -14,8 +15,13 @@ class Graph:
         else:
             self.gdict = gdict
 
-    def get_vertices(self):
-        return list(self.gdict.keys())
+    def get_vertices(self, handicap=False):
+        result = list()
+        for key in self.gdict.keys():
+            if key not in handicap_vert:
+                result.append(key)
+
+        return result
 
     def add_vertex(self, vertex):
         # if vertex doesn't already exist add it to the dictionary
@@ -90,7 +96,7 @@ class Graph:
         dist[source] = 0
         parent[source] = source
 
-        while len(visited) < len(self.get_vertices()):
+        while len(visited) < len(self.get_vertices(handicap)):
             current = None
             min_value = np.Infinity
 
