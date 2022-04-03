@@ -3,7 +3,7 @@ h1{
 }
 
 .container {
-    position: fixed;
+    position:fixed;
     left: 350px;
     padding: 0;
     margin: 0;
