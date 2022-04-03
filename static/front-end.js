@@ -28,7 +28,7 @@
         path = path.replace(/['"]+/g, "");
         shortestPath = path.split(",");
         // path_len = shortestPath[shortestPath.length - 1];
-        document.getElementById("h1").innerHTML = shortestPath[shortestPath.length - 1];
+        document.getElementById("h1").innerHTML = "Feet: " + shortestPath[shortestPath.length - 1];
         shortestPath.pop();
 
         for (let i = 0; i < shortestPath.length; i++)
