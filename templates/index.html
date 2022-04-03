@@ -3,12 +3,18 @@
     <title>Shortest Path Around Campus</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <body>
-        {% include 'waypoints_gfu.svg' %}
-    </body>
-    <label for="myCheck">Handicap:</label> 
-    <input type="checkbox" id="Handicap">
-    <h1 id="h1"></h1>
+    <div class="container">
+        <div class="left-element">
+            <body>
+                {% include 'waypoints_gfu.svg' %}
+            </body>
+        </div>
+        <div class="right-element">
+            <label for="myCheck">Handicap:</label> 
+            <input type="checkbox" id="Handicap">
+            <h1 id="h1"></h1>
+        </div>
+    </div>
     <h2 id="h2"></h2>
 
     <script src={{ url_for('static', filename='wheelchair.js') }}></script>
