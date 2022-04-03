@@ -121,12 +121,6 @@ var unacceptable_vertices = [
     {
         handicap = document.getElementById("Handicap").checked
 
-        if (stations.length <= 1)
-        {
-            reset(e);
-            document.getElementById('Handicap').checked = true;
-        }
-
         if (handicap)
         {
             for (let i = 0; i < unacceptable_vertices.length; i++)
