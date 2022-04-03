@@ -119,11 +119,11 @@ var unacceptable_vertices = [
     });
     document.getElementById("Handicap").addEventListener('click', function(e)
     {
-        if (stations.length == 1)
+        if (stations.length <= 1)
         {
             let temp = handicap;
             reset(e);
-            document.getElementById('Handicap').checked = temp;
+            document.getElementById('Handicap').checked = !temp;
             handicap = temp;
         }
 
