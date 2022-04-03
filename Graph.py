@@ -24,8 +24,16 @@ class Graph:
         else:
             raise Exception("Vertex already exists")
 
-    def adjacent(self, vertex):
-        return list(self.gdict[vertex].keys())
+    def adjacent(self, vertex, handicap=False):
+        result = list()
+        for key in self.gdict[vertex].keys():
+            if handicap:
+                if (len(self.gdict[vertex][key]) == 1):
+                    result.append(key)
+            else:
+                result.append(key)
+
+        return result
 
     def remove_vertex(self, vertex):
 
@@ -74,7 +82,7 @@ class Graph:
         
         return result
 
-    def shortest_path_between(self, source, destination):
+    def shortest_path_between(self, source, destination, handicap=False):
         dist = dict()
         parent = dict()
         visited = set()
@@ -95,7 +103,7 @@ class Graph:
             
             visited.add(current)
 
-            for other in self.adjacent(current):
+            for other in self.adjacent(current, handicap):
                 if other not in visited:
                     new_dist = self.get_edge_weight(current, other) + dist[current]
 
@@ -114,6 +122,9 @@ class Graph:
 
         shortest_path.reverse()
 
+        if handicap:
+            shortest_path = [source]
+        
         return shortest_path
 
     def path_length(self, vertices: list):
