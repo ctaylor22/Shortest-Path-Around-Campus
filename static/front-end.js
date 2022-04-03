@@ -11,6 +11,13 @@ var unacceptable_vertices = [
     "Canyon north path",
     "Canyon south path"];
 
+var warning_entrances = [
+    "EHS north entrance",
+    "EHS east entrance",
+    "Brougher Hall entrance",
+    "Minthorn entrance",
+    "Klages east entrance"];
+
 (function()
 {
     function handicapBox()
@@ -123,6 +130,12 @@ var unacceptable_vertices = [
 
         if (handicap)
         {
+            for (let i = 0; i < unacceptable_vertices.length; i++)
+            {
+                let waypoint = document.getElementById(unacceptable_vertices[i]);
+                waypoint.setAttribute('r', 0);
+            }
+
             for (let i = 0; i < unacceptable_vertices.length; i++)
             {
                 let waypoint = document.getElementById(unacceptable_vertices[i]);
