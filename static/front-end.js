@@ -117,9 +117,8 @@ var unacceptable_vertices = [
             reset(e);
         }
     });
-    document.getElementById("Handicap").addEventListener('click', function(e)
+    document.getElementById("Handicap").addEventListener('click', function()
     {
-        reset(e);
         handicap = document.getElementById("Handicap").checked
         if (handicap)
         {
