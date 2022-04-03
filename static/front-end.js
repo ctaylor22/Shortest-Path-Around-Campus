@@ -9,7 +9,7 @@
         // shortestPath = path.split(",");
         // path_len = shortestPath[shortestPath.length - 1];
         // shortestPath.pop();
-        document.getElementById("h1").innerHTML = shortestPath;
+        document.getElementById("h1").innerHTML = path;
 
         // for (let i = 0; i < shortestPath.length; i++)
         // {
