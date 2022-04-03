@@ -24,8 +24,16 @@ class Graph:
         else:
             raise Exception("Vertex already exists")
 
-    def adjacent(self, vertex):
-        return list(self.gdict[vertex].keys())
+    def adjacent(self, vertex, handicap = False):
+        result = list()
+        for key in self.gdict[vertex].keys():
+            if handicap:
+                if (self.gdict[vertex][key][1]):
+                    result.append(key)
+            else:
+                result.append(key)
+
+        return
 
     def remove_vertex(self, vertex):
 
@@ -95,7 +103,7 @@ class Graph:
             
             visited.add(current)
 
-            for other in self.adjacent(current):
+            for other in self.adjacent(current, handicap):
                 if other not in visited:
                     new_dist = self.get_edge_weight(current, other) + dist[current]
 
