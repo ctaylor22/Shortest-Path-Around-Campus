@@ -74,7 +74,7 @@ class Graph:
         
         return result
 
-    def shortest_path_between(self, source, destination):
+    def shortest_path_between(self, source, destination, handicap:bool):
         dist = dict()
         parent = dict()
         visited = set()
