@@ -1,7 +1,7 @@
 'use strict';
+var handicap = false;
 (function()
 {
-    var handicap = false;
     function handicapBox()
     {
         var checkBox = document.getElementById("myCheck");
@@ -108,6 +108,6 @@
     });
     document.getElementById("Handicap").addEventListener('click', function()
     {
-        document.getElementById("h2").innerHTML = document.getElementById("Handicap").checked
+        handicap = document.getElementById("Handicap").checked
     });
 }())
