@@ -1,6 +1,22 @@
 'use strict';
 (function()
 {
+    function markPath(path)
+    {
+        path = path.replace("[", "");
+        path = path.replace("]", "");
+        path = path.replace(/['"]+/g, "");
+        shortestPath = path.split(",");
+
+        for (let i = 0; i < shortestPath.length; i++)
+        {
+            let station = document.getElementById(shortestPath[i]);
+            let radius = parseFloat(station.getAttribute('r')) + 2;
+            station.setAttribute('r', radius);
+            station.setAttribute('fill', "#00FFFF");
+        }
+    }
+
     function printOutSomething(x)
     {
         x = x.replace("[", "");
@@ -17,21 +33,29 @@
         request.onload = function() {
           if (this.status >= 200 && this.status < 400)
           {
-            printOutSomething(this.response)
+            markPath(this.response);
           }
         }
     }
 
+    let shortestPath = [];
     let stations = [];
     let links = document.getElementById("waypoint_icons");
     links.addEventListener('click', function(event)
     {
-        event.target.setAttribute('fill', "#FF0000");
-        stations.push(event.target.id);
-    });
-    document.getElementById("submit").addEventListener('click', function()
-    {
-        let url = "/api/v1/?source=" + document.getElementById("src").value + "&destination=" + document.getElementById("dest").value
-        getRequest(url);
+        if (stations.length == 0)
+        {
+            event.target.setAttribute('fill', "#FF0000");
+            stations.push(event.target.id);
+        }
+        else if (stations.length == 1)
+        {
+            event.target.setAttribute('fill', "#00FF00");
+            stations.push(event.target.id);
+            
+            let url = "/api/v1/?source=" + stations[0] + "&destination=" + stations[1];
+            getRequest(url);
+        }
+        event.preventDefault();
     });
 }())
