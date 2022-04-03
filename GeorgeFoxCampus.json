@@ -49,7 +49,7 @@
   "Brandt dumpsters": {},
   "E. North St. intersection": {"Bon intersection": 236, "Brandt dumpsters": 150, "Brandt south entrance": 153, "Brandt north entrance": 254},
   "Crisman Crossing east": {"Crisman Crossing west" : 255, "Canyon Commons-Hadlock intersection" : 221, "Bon path" : 118},
-  "Crisman Crossing west": {"Bon path": 118, "Canyon Commons-Hadlock intersection": 221},
+  "Crisman Crossing west": {"Canyon Commons-Hadlock intersection": 221},
   "Canyon Commons-Hadlock intersection": {"Hadlock Gym entrance": 70, "Canyon Commons south entrance": 125, "E. North St. intersection": 517},
   "Pavilion": {"HMS entrance": 176},
   "Sweets lot": {"Pavilion": 212},
