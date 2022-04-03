@@ -108,7 +108,6 @@
     });
     document.getElementById("Handicap").addEventListener('click', function()
     {
-        var checkBox = document.getElementById("Handicap");
-        handicap = checkBox.checked
+        document.getElementById("h2").innerHTML = document.getElementById("Handicap").checked
     });
 }())
