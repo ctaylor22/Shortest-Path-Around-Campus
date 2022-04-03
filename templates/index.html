@@ -3,14 +3,14 @@
     <title>Shortest Path Around Campus</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <h1>Instructions</h1>
-    <p>Welcome to SPAC! Click on any dot on campus and click on any other dot to get the shortest path accros the George Fox Campus.</p>
+    <body>
+        {% include 'waypoints_gfu.svg' %}
+    </body>
     <p>Double click to reset</p>
     <div class="container">
         <div class="left-element">
-            <body>
-                {% include 'waypoints_gfu.svg' %}
-            </body>
+            <h1>Instructions</h1>
+            <p>Welcome to SPAC! Click on any dot on campus and click on any other dot to get the shortest path accros the George Fox Campus.</p>
         </div>
         <div class="right-element">
             <h1 id="h1">Path Length:</h1>
