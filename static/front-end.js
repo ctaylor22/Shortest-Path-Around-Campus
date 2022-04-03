@@ -26,11 +26,8 @@
     let links = document.getElementById("waypoint_icons");
     links.addEventListener('click', function(event)
     {
-        if (stations.length == 0)
-        {
-            event.target.setAttribute('fill', "#FF0000");
-            stations.push(event.target.id);
-        }
+        event.target.setAttribute('fill', "#FF0000");
+        stations.push(event.target.id);
     });
     document.getElementById("submit").addEventListener('click', function()
     {
