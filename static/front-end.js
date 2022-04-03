@@ -3,9 +3,9 @@
 {
     function markPath(path)
     {
-        // path = path.replace("[", "");
-        // path = path.replace("]", "");
-        // path = path.replace(/['"]+/g, "");
+        path = path.replace("[", "");
+        path = path.replace("]", "");
+        path = path.replace(/['"]+/g, "");
         // shortestPath = path.split(",");
         // path_len = shortestPath[shortestPath.length - 1];
         // shortestPath.pop();
