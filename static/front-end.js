@@ -149,6 +149,11 @@ var warning_entrances = [
                 let waypoint = document.getElementById(unacceptable_vertices[i]);
                 waypoint.setAttribute('r', 3);
             }
+            for (let i = 0; i < warning_entrances.length; i++)
+            {
+                let waypoint = document.getElementById(warning_entrances[i]);
+                waypoint.setAttribute('stroke', "#000000");
+            }
         }
     });
 }())
