@@ -6,10 +6,10 @@
         path = path.replace("[", "");
         path = path.replace("]", "");
         path = path.replace(/['"]+/g, "");
-        // shortestPath = path.split(",");
+        shortestPath = path.split(",");
         // path_len = shortestPath[shortestPath.length - 1];
         // shortestPath.pop();
-        document.getElementById("h1").innerHTML = path;
+        document.getElementById("h1").innerHTML = shortestPath[shortestPath.length - 1];
 
         // for (let i = 0; i < shortestPath.length; i++)
         // {
