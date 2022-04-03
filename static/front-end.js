@@ -7,17 +7,17 @@
         path = path.replace("]", "");
         path = path.replace(/['"]+/g, "");
         shortestPath = path.split(",");
-        path_len = shortestPath[shortestPath.length - 1];
-        shortestPath.pop();
-        // document.getElementById("h1").innerHTML = path_len;
+        // path_len = shortestPath[shortestPath.length - 1];
+        // shortestPath.pop();
+        document.getElementById("h1").innerHTML = shortestPath;
 
-        for (let i = 0; i < shortestPath.length; i++)
-        {
-            let station = document.getElementById(shortestPath[i]);
-            let radius = parseFloat(station.getAttribute('r')) + 2;
-            station.setAttribute('r', radius);
-            station.setAttribute('fill', "#FAED27");
-        }
+        // for (let i = 0; i < shortestPath.length; i++)
+        // {
+        //     let station = document.getElementById(shortestPath[i]);
+        //     let radius = parseFloat(station.getAttribute('r')) + 2;
+        //     station.setAttribute('r', radius);
+        //     station.setAttribute('fill', "#FAED27");
+        // }
     }
 
     function printOutSomething(x)
