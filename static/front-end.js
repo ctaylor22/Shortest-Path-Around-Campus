@@ -1,6 +1,26 @@
 'use strict';
 (function()
 {
+    function reset(e) {
+        for (let i = 0; i < stations.length; i++)
+        {
+          document.getElementById(stations[i]).setAttribute('fill', "#FFFFFF");
+        }
+        stations = [];
+        if (shortestPath != [])
+        {
+          for (let i = 0; i < shortestPath.length; i++)
+          {
+            let station = document.getElementById(shortestPath[i]);
+            let radius = parseFloat(station.getAttribute('r')) - 2;
+            station.setAttribute('r', radius);
+            station.setAttribute('fill', "#FFFFFF");
+          }
+          shortestPath = [];
+        }
+        e.preventDefault();
+    }
+
     function markPath(path)
     {
         path = path.replace("[", "");
@@ -61,5 +81,20 @@
             getRequest(url);
         }
         event.preventDefault();
+    });
+
+    document.addEventListener('dblclick', reset);
+    let tapped = false;
+    document.addEventListener('touchstart', function(e)
+    {
+      if(!tapped){
+        tapped=setTimeout(function(){ tapped=false; },300);
+      }
+      else
+      {    //tapped within 300ms of last tap. double tap
+        clearTimeout(tapped);
+        tapped=false;
+        reset(e);
+      }
     });
 }())
