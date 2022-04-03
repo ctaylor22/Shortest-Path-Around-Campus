@@ -117,13 +117,32 @@ var unacceptable_vertices = [
             reset(e);
         }
     });
-    document.getElementById("Handicap").addEventListener('click', function()
+    document.getElementById("Handicap").addEventListener('click', function(e)
     {
+        if (stations.length == 1)
+        {
+            let temp = handicap;
+            reset(e);
+            document.getElementById('Handicap').checked = temp;
+            handicap = temp;
+        }
+
         handicap = document.getElementById("Handicap").checked
         if (handicap)
         {
-            let waypoint = document.getElementById("Amphitheater intersection");
-            waypoint.setAttribute('r', 0);
+            for (let i = 0; i < unacceptable_vertices.length; i++)
+            {
+                let waypoint = document.getElementById(unacceptable_vertices[i]);
+                waypoint.setAttribute('r', 0);
+            }
+        }
+        else
+        {
+            for (let i = 0; i < unacceptable_vertices.length; i++)
+            {
+                let waypoint = document.getElementById(unacceptable_vertices[i]);
+                waypoint.setAttribute('r', 3);
+            }
         }
     });
 }())
