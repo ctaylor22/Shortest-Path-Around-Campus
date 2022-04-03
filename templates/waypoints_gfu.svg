@@ -6925,12 +6925,12 @@ gAooooAKKKKACiiigD//2Q==
            cy="112"
            r="3" />
         <circle
-           id="Wheeler Bridge west"
+           id="Wheeler bridge west"
            cx="310"
            cy="75"
            r="3" />
         <circle
-           id="Wheeler Bridge east"
+           id="Wheeler bridge east"
            cx="392"
            cy="60"
            r="3" />
@@ -6983,11 +6983,6 @@ gAooooAKKKKACiiigD//2Q==
            id="Track east"
            cx="242"
            cy="156"
-           r="3" />
-        <circle
-           id="Roberts sidewalk"
-           cx="420"
-           cy="190"
            r="3" />
       </g>
     </a>
@@ -7178,11 +7173,6 @@ gAooooAKKKKACiiigD//2Q==
            id="HMS entrance"
            cx="399"
            cy="346"
-           r="4.5" />
-        <circle
-           id="Roberts mail entrance"
-           cx="438"
-           cy="265"
            r="4.5" />
       </g>
     </a>

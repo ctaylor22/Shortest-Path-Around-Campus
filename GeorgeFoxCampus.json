@@ -47,13 +47,13 @@
   "Newlin lot": {"Newlin north entrance": 125, "Le Shana north entrance": 146,"Wheeler Bridge east": 280},
   "Newlin-Brandt intersection": {"Brandt north entrance": 138, "Newlin south entrance": 99, "Newlin lot": 85, "Brandt dumpsters": 118},
   "Brandt dumpsters": {},
-  "E. North St. intersection": {"Bon intersection": 236, "Brandt dumpsters": 150, "Brandt south entrance": 153, "Brandt north entrance": 254, "Roberts sidewalk":  170},
+  "E. North St. intersection": {"Bon intersection": 236, "Brandt dumpsters": 150, "Brandt south entrance": 153, "Brandt north entrance": 254},
   "Crisman Crossing east": {"Crisman Crossing west" : 255, "Canyon Commons-Hadlock intersection" : 221, "Bon path" : 118},
-  "Crisman Crossing west": {},
-  "Canyon Commons-Hadlock intersection": {"Hadlock Gym entrance": 70, "Canyon Commons south entrance": 125, "Roberts sidewalk": 370},
+  "Crisman Crossing west": {"Canyon Commons-Hadlock intersection": 221},
+  "Canyon Commons-Hadlock intersection": {"Hadlock Gym entrance": 70, "Canyon Commons south entrance": 125, "E. North St. intersection": 517},
   "Pavilion": {"HMS entrance": 176},
-  "Suites lot": {"Pavilion": 212},
-  "Pennington lot east": {"Suites lot": 168},
+  "Sweets lot": {"Pavilion": 212},
+  "Pennington lot east": {"Sweets lot": 168},
   "Pennington lot west": {"Pennington lot east": 451},
   "Edwards lot": {"Pennington intersection": 267, "Pennington lot east": 260},
   "Le Shana-Gulley intersection": {"Le Shana south entrance": 51, "Brandt dumpsters": 103, "Gulley main entrance": 55, "Canyon-Gulley": 95},
@@ -84,6 +84,5 @@
   "Quad 3": {"Quad 2": 48, "Quad Center": 173},
   "Quad 4": {},
   "Quad 5": {"Murdock Library entrance": 119, "Quad 4":  60, "Quad Center": 90, "Quad 6": 82},
-  "Quad 6": {},
-  "Roberts mail entrance" : {"Canyon Commons-Hadlock intersection": 272, "Hadlock Student Center entrance":  206}
+  "Quad 6": {}
 }
