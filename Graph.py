@@ -35,7 +35,7 @@ class Graph:
         for source in self.gdict:
             for destination in self.gdict[source]:
                 if destination == vertex:
-                    del self.gdict[source][destination]
+                    del self.gdict[source][destination][0]
         
         del self.gdict[vertex]
 
@@ -45,8 +45,8 @@ class Graph:
             raise Exception("Invalid Vertices")
 
         if destination not in self.gdict[source] or source not in self.gdict[destination]:
-            self.gdict[source][destination] = weight
-            self.gdict[destination][source] = weight
+            self.gdict[source][destination][0] = weight
+            self.gdict[destination][source][0] = weight
         else:
             raise Exception("Duplicate Edge")
     
@@ -57,8 +57,8 @@ class Graph:
         if destination not in self.gdict[source]:
             raise Exception("No such Edge")
 
-        del self.gdict[source][destination]
-        del self.gdict[destination][source]
+        del self.gdict[source][destination][0]
+        del self.gdict[destination][source][0]
 
     def edge_exists(self, source, destination):
         return source in self.gdict and destination in self.gdict[source]
@@ -68,7 +68,7 @@ class Graph:
 
         # if source and destination exist... and if it is an edge
         if source in self.gdict and destination in self.gdict and destination in self.gdict[source]:
-            result = self.gdict[source][destination]
+            result = self.gdict[source][destination][0]
         else:
             raise Exception("Invalid Vertices")
         
@@ -136,7 +136,7 @@ class Graph:
             
             for source in json_data:
                 for destination in json_data[source]:
-                    json_data[destination][source] = json_data[source][destination]
+                    json_data[destination][source][0] = json_data[source][destination][0]
 
             result = Graph(json_data)
         

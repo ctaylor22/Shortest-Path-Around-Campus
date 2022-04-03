@@ -12,4 +12,6 @@ def index():
 @app.route('/api/v1/')
 def api():
     req = request.args
-    return jsonify(graph.shortest_path_between(req['source'], req['destination'])), 200
+    shortest_path = graph.shortest_path_between(req['source'], req['destination'])
+    path_len = graph.path_length(shortest_path)
+    return jsonify(shortest_path.append(path_len)), 200
