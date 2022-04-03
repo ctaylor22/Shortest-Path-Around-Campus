@@ -28,7 +28,7 @@ class Graph:
         result = list()
         for key in self.gdict[vertex].keys():
             if handicap:
-                if (self.gdict[vertex][key][1]):
+                if (len(self.gdict[vertex][key]) == 1):
                     result.append(key)
             else:
                 result.append(key)
