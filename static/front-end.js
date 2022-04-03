@@ -55,6 +55,7 @@ var warning_entrances = [
         shortestPath = path.split(",");
         // path_len = shortestPath[shortestPath.length - 1];
         document.getElementById("h1").innerHTML = "Path Length: " + shortestPath[shortestPath.length - 1] + "Feet";
+        document.getElementById("h3").innerHTML = "Estimated Time: " + parseFloat(shortestPath[shortestPath.length - 1]) * 0.003246753246753247 + "Minutes";
         shortestPath.pop();
 
         for (let i = 0; i < shortestPath.length; i++)
