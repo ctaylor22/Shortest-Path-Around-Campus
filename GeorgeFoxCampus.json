@@ -78,7 +78,7 @@
   "Bauman intersection": {"Bauman Auditorium entrance": [52]},
   "Duke entrance": {},
   "Stevens intersection": {"Stevens entrance":  [47], "Quad 2":  [112]},
-  "International intersection": {"Pennington lot west": [257]},
+  "International intersection": {"Pennington lot west": [257], "Quad 1":  [47]},
   "Quad 1": {"Pennington intersection": [153]},
   "Quad 2": {"International intersection": [140], "Quad 1":  [150]},
   "Quad 3": {"Quad 2": [48], "Quad Center": [173]},
