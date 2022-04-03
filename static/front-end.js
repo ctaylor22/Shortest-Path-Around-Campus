@@ -136,10 +136,10 @@ var warning_entrances = [
                 waypoint.setAttribute('r', 0);
             }
 
-            for (let i = 0; i < unacceptable_vertices.length; i++)
+            for (let i = 0; i < warning_entrances.length; i++)
             {
-                let waypoint = document.getElementById(unacceptable_vertices[i]);
-                waypoint.setAttribute('r', 0);
+                let waypoint = document.getElementById(warning_entrances[i]);
+                waypoint.setAttribute('stroke', "#FF0000");
             }
         }
         else
