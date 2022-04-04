@@ -7,7 +7,7 @@ var handicap = false;
     function reset(e)
     {
         document.getElementById("h1").innerHTML = "Path Length:"
-        document.getElementById("h3").innerHTML = "Estimated Time::"
+        document.getElementById("h3").innerHTML = "Estimated Time:"
         for (let i = 0; i < waypoints.length; i++)
         {
             document.getElementById(waypoints[i]).setAttribute('fill', "#FFFFFF");
