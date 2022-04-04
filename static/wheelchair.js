@@ -16,4 +16,5 @@ var unacceptable_vertices = [
     "Canyon north path",
     "Canyon south path"];
 
-module.exports = {Unacceptable};
+module.exports = {unacceptable_vertices};
+module.exports = {warning_entrances};
