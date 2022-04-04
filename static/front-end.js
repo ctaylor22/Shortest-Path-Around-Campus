@@ -138,6 +138,19 @@ var handicap = false;
                 waypoint.setAttribute('stroke', "#FF0000");
             }
             let url = "/api/v1/?source=" + waypoints[0] + "&destination=" + waypoints[1] + "&handicap=" + handicap;
+            if (shortestPath != [])
+            {
+                // resets waypoints back to default
+                for (let i = 0; i < shortestPath.length; i++)
+                {
+                    let station = document.getElementById(shortestPath[i]);
+                    let radius = parseFloat(station.getAttribute('r')) - 2;
+                    station.setAttribute('r', radius);
+                    station.setAttribute('fill', "#FFFFFF");
+                }
+                // empties selected vertices
+                shortestPath = [];
+            }
             console.log(url);
             getRequest(url);
         }
@@ -156,6 +169,19 @@ var handicap = false;
                 waypoint.setAttribute('stroke', "#000000");
             }
             let url = "/api/v1/?source=" + waypoints[0] + "&destination=" + waypoints[1] + "&handicap=" + handicap;
+            if (shortestPath != [])
+            {
+                // resets waypoints back to default
+                for (let i = 0; i < shortestPath.length; i++)
+                {
+                    let station = document.getElementById(shortestPath[i]);
+                    let radius = parseFloat(station.getAttribute('r')) - 2;
+                    station.setAttribute('r', radius);
+                    station.setAttribute('fill', "#FFFFFF");
+                }
+                // empties selected vertices
+                shortestPath = [];
+            }
             console.log(url);
             getRequest(url);
         }
