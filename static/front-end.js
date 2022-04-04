@@ -28,11 +28,11 @@ var warning_entrances = [
 
     function reset(e)
     {
-        for (let i = 0; i < stations.length; i++)
+        for (let i = 0; i < waypoints.length; i++)
         {
-            document.getElementById(stations[i]).setAttribute('fill', "#FFFFFF");
+            document.getElementById(waypoints[i]).setAttribute('fill', "#FFFFFF");
         }
-        stations = [];
+        waypoints = [];
         if (shortestPath != [])
         {
             for (let i = 0; i < shortestPath.length; i++)
@@ -90,21 +90,21 @@ var warning_entrances = [
     }
 
     let shortestPath = [];
-    let stations = [];
+    let waypoints = [];
     let links = document.getElementById("waypoint_icons");
     links.addEventListener('click', function(event)
     {
-        if (stations.length == 0)
+        if (waypoints.length == 0)
         {
             event.target.setAttribute('fill', "#FF0000");
-            stations.push(event.target.id);
+            waypoints.push(event.target.id);
         }
-        else if (stations.length == 1)
+        else if (waypoints.length == 1)
         {
             event.target.setAttribute('fill', "#00FF00");
-            stations.push(event.target.id);
+            waypoints.push(event.target.id);
             
-            let url = "/api/v1/?source=" + stations[0] + "&destination=" + stations[1] + "&handicap=" + handicap;
+            let url = "/api/v1/?source=" + waypoints[0] + "&destination=" + waypoints[1] + "&handicap=" + handicap;
             console.log(url);
             getRequest(url);
         }
