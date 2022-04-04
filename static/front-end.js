@@ -137,6 +137,9 @@ var handicap = false;
                 let waypoint = document.getElementById(warning_entrances[i]);
                 waypoint.setAttribute('stroke', "#FF0000");
             }
+            let url = "/api/v1/?source=" + waypoints[0] + "&destination=" + waypoints[1] + "&handicap=" + handicap;
+            console.log(url);
+            getRequest(url);
         }
         else
         {
@@ -152,6 +155,9 @@ var handicap = false;
                 let waypoint = document.getElementById(warning_entrances[i]);
                 waypoint.setAttribute('stroke', "#000000");
             }
+            let url = "/api/v1/?source=" + waypoints[0] + "&destination=" + waypoints[1] + "&handicap=" + handicap;
+            console.log(url);
+            getRequest(url);
         }
     });
 }())
