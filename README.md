@@ -7,4 +7,4 @@ The shortest path will be printed out with the path length and the estimated tim
 Double click to reset
 
 ### Live Demonstration
-https://codejamteam1.herokuapp.com/#te
+https://shortestpath.herokuapp.com/#te
