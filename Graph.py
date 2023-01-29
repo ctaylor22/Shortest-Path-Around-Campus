@@ -3,7 +3,7 @@ import json
 handicap_vert = ["Amphitheater intersection", "Gravel intersection", "Canyon west entrance", "Canyon north entrance","Spil stairs", "Pavilion", "Suites lot", "Canyon north path", "Canyon south path"]
 
 class Graph:
-
+    
     # Member Variables
     gdict = None
 
