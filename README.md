@@ -7,4 +7,4 @@ The shortest path will be printed out with the path length and the estimated tim
 Double click to reset
 
 ### Live Demonstration
-https://shortestpath.herokuapp.com/#te
+https://shortest-path-around-campus-ctaylor22.vercel.app/
